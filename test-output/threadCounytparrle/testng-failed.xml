@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite data-provider-thread-count="2" name="Failed suite [threadCounytparrle]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="count(failed)">
+    <classes>
+      <class name="dataproviderstestng.ThreadCountParrallel">
+        <methods>
+          <include name="close"/>
+          <include name="LoginHRM" invocation-numbers="0 1 2 3 4 5"/>
+        </methods>
+      </class> <!-- dataproviderstestng.ThreadCountParrallel -->
+    </classes>
+  </test> <!-- count(failed) -->
+</suite> <!-- Failed suite [threadCounytparrle] -->

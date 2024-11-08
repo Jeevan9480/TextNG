@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite5">
+	<groups>
+		<run>
+			<include name="functional" />
+		</run>
+	</groups>
+	<!--  for  the example we want to execute a "functional"" group in the both text1 and text2 
+	      no need to create two different group for that. we can call it in the suite level 
+	      easly it will execute text one and text two-->
+
+	<test name="Test1">	
+		<classes>
+			<class name="grouptext.Group1" />
+		</classes>
+	</test>
+	<test name="test2">
+		<classes>
+			<class name="grouptext.Group2" />
+		</classes>
+
+	</test>
+
+</suite>

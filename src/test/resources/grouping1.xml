@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite5">
+	<test name="Test5">
+		<groups>
+			<define name="dailybuild">
+				<include name="smoke" />
+				<include name="functional" />
+				<!--group the test dailybuild and weeklybuild in the define section -->
+			</define>
+
+			<define name="weeklybuild">
+				<include name="smoke" />
+				<include name="regression" />
+				<include name="functional" />
+				<include name="sanity" />
+			</define>
+
+			<run>
+
+				<!-- 
+				<include name="weeklybuild" />
+				  -->
+
+				<!--  when we call the weeklybuild all the group of inside the
+				define will be execute
+				  what ever the test group you have run call the name in the run section-->
+
+
+				<include name="All" />
+
+				<!-- we decelare the @Test(groups={"all"}   in the class level all
+				the method in side the class will be excecute 
+				   if the method part of the group are not a part of the group it will be execute.
+				                        that is called partial group...........   
+				  -->
+
+
+			</run>
+
+		</groups>
+		<classes>
+			<class name="grouptext.Group1" />
+			<class name="grouptext.Group2" />
+
+
+		</classes>
+	</test>
+</suite>

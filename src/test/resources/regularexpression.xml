@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite5">
+	<groups>
+		<!--<run>
+			<include name="windsows.regression" />
+			<include name="windsows.smoke" />
+			<include name="windsows.sanity" />
+		</run>-->
+
+		<!--if right multiple step like this^ we have to right in one line also what ever in side the windows. it will execute -->
+
+		<run>
+			<include name="windsows.*" />
+		</run>
+
+
+	</groups>
+	<test name="test12">
+		<classes>
+			<class name="grouptext.Group1">
+			</class>
+		</classes>
+	</test>
+	<test name="test13">
+		<classes>
+			<class name="grouptext.Group2">
+			</class>
+		</classes>
+	</test>
+</suite>

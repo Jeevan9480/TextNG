@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite5">
+	<test name="Test5">
+		<groups>
+			<run>
+				<include name="smoke" />
+				<exclude name="regression"/>
+				
+				<!--if you used include smoke all group where ever smoke is there it wii be display
+				if you used exclude regression in the group where smoke and regression both are there that group not execute -->
+				
+			</run>
+
+		</groups>
+		<classes>
+			<class name="grouptext.Group1" />
+			<class name="grouptext.Group2" />
+
+
+		</classes>
+	</test>
+</suite>

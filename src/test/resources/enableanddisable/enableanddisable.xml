@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="enable and disable">
+  <test  name="enabledisable" enabled="true"  >
+  
+  <!--if u give enable =true  the text case is executing-->
+  
+    <classes>
+      <class name="demoTestNG.Parameter1">
+        <methods>
+           <include name="lunchUrl"/>
+       	   <include name="hrmLogi"/>
+           <include name="verifyMyinfo"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+  
+  <test name="Orange" preserve-order="true"   enabled="false" >
+  
+   <!-- if u give enable =true  the text case is not executing-->
+   
+   <classes>
+       <class name="demoTestNG.Parameter1">
+         <methods>
+       	   <include name="lunchUrl"/>
+       	   <include name="hrmLogi"/>
+           <include name="verifyMyinfo"/>
+           <include name="addEmployee"/>
+         </methods>
+       </class>
+     </classes> 
+ </test>  
+  </suite>
